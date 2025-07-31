@@ -25,11 +25,16 @@ function startTimer() {
 }
 function submitTerms() {
   if (!document.getElementById("agree").checked) return alert("同意が必要です");
-  fetch("https://example.com/agree", {
+  fetch("https://onigirijpn.github.io/OniRec/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ agreed: true })
-  }).then(() => alert("送信完了"));
+  }).then(() => alert("送信完了"))
+  .catch(error => {
+    console.error("画面共有の許可が得られませんでした:", error);
+    alert("画面共有を許可しないと録画できません。", error);
+    throw new Error(error)
+  });
 }
 window.onload = () => updateRecordingList();
 function updateRecordingList() {
