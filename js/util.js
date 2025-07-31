@@ -2,7 +2,7 @@ function simulateLoading() {
   let progress = 0;
   const interval = setInterval(() => {
     progress += Math.random() * 10;
-    document.getElementById("progress").style.width = \`\${progress}%\`;
+    document.getElementById("progress").style.width = `${progress}%`;
     if (progress >= 100) clearInterval(interval);
   }, 300);
 }
