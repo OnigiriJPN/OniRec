@@ -38,7 +38,7 @@ function updateRecordingList() {
   const list = JSON.parse(localStorage.getItem("recordings") || "[]");
   list.forEach(({ name, url }) => {
     const div = document.createElement("div");
-    div.innerHTML = \`\${name} <a href="\${url}" download>▶︎ ダウンロード</a>\`;
+    div.innerHTML = `${name} <a href="${url}" download>▶︎ ダウンロード</a>`;
     container.appendChild(div);
   });
 }
