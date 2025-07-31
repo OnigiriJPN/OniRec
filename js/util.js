@@ -1,4 +1,4 @@
-function simulateLoading() {
+/*function simulateLoading() {
   let progress = 0;
   const interval = setInterval(() => {
     progress += Math.random() * 10;
@@ -16,3 +16,4 @@ if (canvas) {
     ctx.fillRect(0, canvas.height - level, canvas.width, level);
   }, 100);
 }
+*/
