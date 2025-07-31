@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>編集画面</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>📝 編集画面</h2>
+    <video id="editVideo" controls></video>
+    <input type="number" id="startTime" placeholder="開始秒" />
+    <input type="number" id="endTime" placeholder="終了秒" />
+    <button onclick="trimVideo()">✂️ 切り取り</button>
+    <button onclick="window.location.href='index.html'">🔙 戻る</button>
+  </div>
+  <script src="js/trim.js"></script>
+</body>
+</html>
